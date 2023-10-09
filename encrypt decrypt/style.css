@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:gilroy;
+    color: #fff;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#main1{
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+    background-color: #CEB575;
+    padding: 100px 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#main1>img{
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 10s;
+}
+#main1>img:hover{
+   right: 15%;
+
+}
+#main1>h1{
+    font-size: 48px;
+    display: flex;
+    align-items: center; 
+   
+}
+#main1>h1 span{
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+#main1>h1 span img{
+    height: 40px;
+    rotate: 90deg;
+    transition: 0.3s ease;
+}
+#main1 #endec-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 8px 8px;
+    width: 28%;
+    margin: 35px 0;
+}
+#endec-div h3{
+    font-size: 17px;
+    display: flex;
+    border-radius: 8px;
+    font-weight: 500;
+    align-items: center;
+    /* background-color: red; */
+    cursor: pointer;
+    padding: 12px 10px;
+    transition: 0.2s ease;
+}
+#enc-btn{
+    background-color: #333;
+}
+#endec-div h3 span{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+#endec-div h3 img{
+    height: 20px;
+}
+#encryption{
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#encryption h5{
+    font-size: 16px;
+    font-weight: 500;
+    color: #6e6e6e;
+    margin-bottom: 13px;
+}
+#encryption textarea{
+    width: 100%;
+    height: 70px;
+    border: 1px solid #343434;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+    background-color: #1C1C1C;
+}
+#encryption input{
+    width: 100%;
+    border: 1px solid #343434;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: #1C1C1C;
+}
+
+#encryption button{
+    display: flex;
+    align-items: center;
+    color: #6e6e6e;
+    background-color: #1C1C1C;
+
+    border: none;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: #eee;
+    font-size: 17px;
+}
+button span{
+    display: flex;
+    margin-right: 10px;
+}
+button img{
+    height: 20px;
+}
+
+#decryption{
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+}
+
+#decryption h5{
+    font-size: 16px;
+    font-weight: 500;
+    color: #6e6e6e;
+    margin-bottom: 13px;
+}
+#decryption textarea{
+    width: 100%;
+    height: 70px;
+    border: 1px solid #343434;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+    background-color: #1C1C1C;
+}
+#decryption input{
+    width: 100%;
+    border: 1px solid #343434;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: #1C1C1C;
+}
+
+#decryption button{
+    display: flex;
+    align-items: center;
+    color: #6e6e6e;
+    background-color: #1C1C1C;
+
+    border: none;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: #eee;
+    font-size: 17px;
+}
+button span{
+    display: flex;
+    margin-right: 10px;
+}
+button img{
+    height: 20px;
+}
+
+#result{
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #1C1C1C;
+    border: 1px solid #343434;
+    width: 45%;
+    display: none;
+    margin-top: 40px;
+}
+.simle{
+    height: 100%;
+     width: 20%; 
+     /* background-color: #fff; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    bottom: -60%;
+    left: 3%;
+    
+}
+/* #left{
+    width: 200px;
+    position: absolute;
+    left: 0%;
+} */
+.simle img{
+position: absolute;
+    scale: .6;
+    animation-name: move;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    50%{
+       
+        opacity: 1;
+    }
+    70%{
+       
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+}
+.simle img:nth-child(1){
+    animation-delay: 0s;
+    /* width: 70px; */
+}
+.simle  img:nth-child(2){
+    animation-delay: 1.8s;
+    /* width: 80px; */
+}
+.simle  img:nth-child(3){
+    animation-delay: 3.5s;
+    width: 150px;
+}
